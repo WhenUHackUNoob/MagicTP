@@ -1,0 +1,16 @@
+name: MagicTP
+version: '${project.version}'
+main: com.whenuhackunoob.magictp.MagicTP
+api-version: 1.8
+authors: [ WhenUHackUNoob ]
+description: A plugin which efficiently uses the TP method to teleport players to random locations
+website: https://whenuhackunoob.com
+
+commands:
+  rtp:
+    aliases:
+      - randomteleport
+      - randomtp
+      - rteleport
+    usage: /rtp
+    description: "Randomly teleport to somewhere."
