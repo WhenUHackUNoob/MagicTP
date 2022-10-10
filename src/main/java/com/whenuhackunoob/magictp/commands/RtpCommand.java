@@ -72,7 +72,7 @@ public class RtpCommand implements CommandExecutor {
                     }
                     player.teleport(loc);
                 } else {
-                    // start generating new bollocks
+                    player.sendMessage(Format.color("&cCould not find safe location! Please try again."));
                 }
             }
         } else {
