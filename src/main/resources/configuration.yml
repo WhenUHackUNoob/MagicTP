@@ -17,11 +17,11 @@ coordinates:
 world:
   usecurrent: true # Generate a location in the world the player is CURRENTLY in. If false set world below.
   world: "world" # Name of the world the coordinates should be generated in.
+  useWorldBorder: false # THIS WILL OVERRIDE MIN/MAX X AND Z COORDINATES. Y WILL STILL BE IN USE.
 
 safety:
   check:
     enabled: true # Check that there is no block(s) where the player is going to be teleported. (this should only be used if they can be teleported in air or void)
     type: "air" # Type to check. Air = no block where they are (MORE COMING SOON)
-
   block:
     place: true # Place a block below if the location is safe and the player will be teleported (THIS WONT WORK IF SAFETY CHECK IS FALSE)

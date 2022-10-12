@@ -48,8 +48,6 @@ public class RtpCommand implements CommandExecutor {
             randomLocBlock = Bukkit.getWorld(config.getString("world.world")).getBlockAt(x, y, z);
         }
 
-        player.sendMessage(randomLocBlock.toString());
-
         String block = "GRASS_BLOCK";
         if (getVersion() <= 1122) block = "GRASS";
 
@@ -81,6 +79,8 @@ public class RtpCommand implements CommandExecutor {
             player.teleport(loc);
         }
 
+        //player.sendMessage("DEBUG: " + getWbSize(player.getWorld().getName()));
+
         return true;
     }
 
@@ -92,5 +92,9 @@ public class RtpCommand implements CommandExecutor {
         String[] ver = Bukkit.getServer().getVersion().split(" ");
         String version = ver[ver.length - 1].replace(")", "").replace(".", "");
         return Integer.parseInt(version);
+    }
+
+    public int getWbSize(String world) {
+        return (int) Bukkit.getServer().getWorld(world).getWorldBorder().getSize();
     }
 }
